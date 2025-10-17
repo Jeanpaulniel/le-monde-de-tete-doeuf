@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Le Monde de Tête d’Œuf — TDO</title>
-<meta name="description" content="Écosystème Web3 solidaire : Token TDO, NFTs (ERC-721/1155), boutique, causes caritatives, votes, blog, futur jeu. Réseau Polygon.">
+<meta name="description" content="Écosystème Web3 solidaire : Token TDO, NFTs, boutique, causes caritatives et futur jeu sur Polygon.">
 <style>
 :root{--bg:#0b0b0f;--card:#14141c;--ink:#eaeaf2;--muted:#a5a6b8;--pri:#ffcc00;--acc:#ff477e}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto}
@@ -14,28 +14,40 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
 .nav .inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;padding:12px 24px}
 .logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--pri),var(--acc));display:grid;place-items:center;font-weight:800;color:#000}
 .btn{background:var(--pri);color:#111;padding:10px 16px;border-radius:12px;font-weight:700}
+.actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.lang button{padding:6px 10px;border:none;border-radius:8px;cursor:pointer;background:#1a1b2b;color:#eaeaf2;border:1px solid #2b2c3f}
+.lang button.active{outline:2px solid #ffcc00}
 .section{padding:56px 0}.h2{font-size:clamp(22px,2.5vw,32px)}
 .chip{display:inline-block;border:1px solid #2b2c3f;border-radius:999px;padding:6px 10px;margin:3px;color:var(--muted)}
 .card{background:#14141c;border:1px solid #22243a;border-radius:16px;padding:16px;margin-top:16px}
-.footer{border-top:1px solid #23243a;padding:28px 0;color:#8e90a6;text-align:center}
 .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.footer{border-top:1px solid #23243a;padding:28px 0;color:#8e90a6;text-align:center}
+.banner{width:100%;height:auto;border-bottom:2px solid #222}
 </style>
 </head>
 <body>
+
 <nav class="nav">
   <div class="inner container">
     <div class="logo">🥚</div>
     <strong>Le Monde de Tête d’Œuf</strong>
-    <a href="#soutenir" class="btn">Soutenir</a>
+    <div class="actions">
+      <div class="lang">
+        <button id="lang-fr" class="active">FR</button>
+        <button id="lang-en">EN</button>
+      </div>
+      <a href="#soutenir" class="btn">Soutenir</a>
+    </div>
   </div>
 </nav>
+
+<!-- Bannière principale -->
+<img src="banner.jpg" alt="Bannière Le Monde de Tête d’Œuf" class="banner">
 
 <header class="container">
   <h1>Cartoon • Underground • Solidaire</h1>
   <p>Bienvenue dans l’écosystème <strong>$TDO</strong> — token utilitaire, NFTs jouables, boutique phygitale et œuvres caritatives. Réseau : Polygon.</p>
-  <div>
-    <span class="chip">ERC-20</span><span class="chip">ERC-721</span><span class="chip">ERC-1155</span><span class="chip">QR Codes</span>
-  </div>
+  <div><span class="chip">ERC-20</span><span class="chip">ERC-721</span><span class="chip">ERC-1155</span></div>
 </header>
 
 <section id="nfts" class="section container">
@@ -49,11 +61,11 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
 
 <section id="token" class="section container">
   <h2 class="h2">Token $TDO</h2>
-  <p>Le « token du peuple » : utilitaire pour achats, votes communautaires, avantages in-game et récompenses des détenteurs.</p>
+  <p>Le « token du peuple » : utilitaire pour achats, votes, avantages in-game et récompenses des détenteurs.</p>
   <div class="card">
     <p><strong>Adresse :</strong> 0xeE964B0CB9bbF0d219fb85d0B54D4F0fb3F78F76<br>
-       <strong>Réseau :</strong> Polygon<br>
-       <strong>Liquidité :</strong> QuickSwap (à venir)</p>
+    <strong>Réseau :</strong> Polygon<br>
+    <strong>Liquidité :</strong> QuickSwap (à venir)</p>
   </div>
 </section>
 
@@ -72,40 +84,24 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
   <h2 class="h2">Soutenir le projet</h2>
   <h3>💼 Contribuer à la Trésorerie TDO</h3>
   <p>Les contributions servent à la production, la liquidité initiale et le développement du jeu.</p>
-  <div class="card">
-    <p><strong>Adresse Trésorerie :</strong><br><span>0xCd67007FdB1beaFD17578C5cC1cCd360eE55df3A</span></p>
-  </div>
+  <div class="card"><p><strong>Adresse Trésorerie :</strong><br>0xCd67007FdB1beaFD17578C5cC1cCd360eE55df3A</p></div>
+
   <h3>💖 Soutenir les causes solidaires</h3>
   <p>Fonds redistribués vers les causes votées par la communauté : cancer du sein, VIH/SIDA, harcèlement scolaire, violences conjugales…</p>
-  <div class="card">
-    <p><strong>Wallet Solidaire :</strong><br><span>0x1d114B6B81A2f08a219d4c6Cb86cbFC86De27A0a</span></p>
-  </div>
+  <div class="card"><p><strong>Wallet Solidaire :</strong><br>0x1d114B6B81A2f08a219d4c6Cb86cbFC86De27A0a</p></div>
 </section>
 
 <footer class="footer">
   © <script>document.write(new Date().getFullYear())</script> Le Monde de Tête d’Œuf — $TDO
 </footer>
-<!-- Sélecteur de langue -->
-<div style="position:fixed;top:10px;right:10px">
-  <button id="lang-fr" style="padding:6px 10px;border:none;border-radius:8px;margin-right:6px;cursor:pointer">FR</button>
-  <button id="lang-en" style="padding:6px 10px;border:none;border-radius:8px;cursor:pointer">EN</button>
-</div>
 
 <script>
-const fr = {
-  title:"Le Monde de Tête d’Œuf — TDO",
-  headline:"Cartoon • Underground • Solidaire",
-  intro:"Bienvenue dans l’écosystème $TDO — token utilitaire, NFTs jouables, boutique phygitale et œuvres caritatives. Réseau : Polygon."
-};
-const en = {
-  title:"The World of EggHead — TDO",
-  headline:"Cartoon • Underground • Solidarity",
-  intro:"Welcome to the $TDO ecosystem — utility token, playable NFTs, phygital shop and charity projects. Network: Polygon."
-};
-const h1=document.querySelector("h1");
-const p=document.querySelector("header p");
-document.getElementById("lang-fr").onclick=()=>{document.title=fr.title;h1.textContent=fr.headline;p.textContent=fr.intro;}
-document.getElementById("lang-en").onclick=()=>{document.title=en.title;h1.textContent=en.headline;p.textContent=en.intro;}
+const fr={title:"Le Monde de Tête d’Œuf — TDO",headline:"Cartoon • Underground • Solidaire",intro:"Bienvenue dans l’écosystème $TDO — token utilitaire, NFTs jouables, boutique phygitale et œuvres caritatives. Réseau : Polygon."};
+const en={title:"The World of EggHead — TDO",headline:"Cartoon • Underground • Solidarity",intro:"Welcome to the $TDO ecosystem — utility token, playable NFTs, phygital shop and charity projects. Network: Polygon."};
+const h1=document.querySelector("h1"),p=document.querySelector("header p"),bFR=document.getElementById("lang-fr"),bEN=document.getElementById("lang-en");
+bFR.onclick=()=>{document.title=fr.title;h1.textContent=fr.headline;p.textContent=fr.intro;bFR.classList.add('active');bEN.classList.remove('active');};
+bEN.onclick=()=>{document.title=en.title;h1.textContent=en.headline;p.textContent=en.intro;bEN.classList.add('active');bFR.classList.remove('active');};
 </script>
+
 </body>
 </html>
