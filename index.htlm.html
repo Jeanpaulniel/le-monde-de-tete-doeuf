@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang='fr'>
+<head>
+<meta charset='utf-8'/>
+<meta name='viewport' content='width=device-width, initial-scale=1'/>
+<title>Le Monde de Tête d’Œuf — TDO</title>
+<link rel="icon" href="https://raw.githubusercontent.com/Jeanpaulniel/assets/69b4d6ef30271764c6c384f09c2e11cf960c25b7/TeteDoeuf_logo_256%20(1).png">
+<style>
+:root{--bg:#0b0b0f;--card:#14141c;--ink:#eaeaf2;--muted:#a5a6b8;--pri:#ffcc00;--sec:#8a5cf6;--acc:#ff477e}
+*{box-sizing:border-box} html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Noto Sans,Helvetica,Arial}
+.container{max-width:1120px;margin:0 auto;padding:24px} a{color:inherit;text-decoration:none} img{max-width:100%;display:block}
+.nav{position:sticky;top:0;background:rgba(11,11,15,.8);backdrop-filter:blur(10px);z-index:50;border-bottom:1px solid #1f2030}
+.nav .inner{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:12px 24px}
+.brand{display:flex;gap:12px;align-items:center} .logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--pri),var(--acc));display:grid;place-items:center;color:#000;font-weight:800}
+.menu{display:flex;gap:16px;flex-wrap:wrap} .btn{display:inline-flex;gap:10px;align-items:center;background:var(--pri);color:#111;padding:12px 16px;border-radius:14px;font-weight:700;border:0;cursor:pointer;box-shadow:0 10px 24px rgba(255,204,0,.15)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid #2b2c3f;box-shadow:none}
+.hero{padding:24px 0 0;background:radial-gradient(1200px 400px at 50% -10%,rgba(138,92,246,.25),transparent),radial-gradient(900px 400px at 0% 0%,rgba(255,71,126,.18),transparent)}
+.h1{font-size:clamp(28px,4vw,52px);line-height:1.05;margin:0 0 14px} .lead{color:var(--muted);max-width:56ch}
+.card{background:linear-gradient(180deg,#181926,#12131c);border:1px solid #22243a;border-radius:18px;padding:20px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0} .chip{border:1px solid #2b2c3f;border-radius:999px;padding:8px 12px;color:var(--muted);font-size:14px}
+.section{padding:56px 0} .h2{font-size:clamp(22px,2.5vw,32px);margin:0 0 18px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px} .gallery img{width:100%;height:220px;object-fit:cover;border-radius:12px;border:1px solid #2b2c3f}
+.footer{padding:28px 0;border-top:1px solid #23243a;color:#8e90a6} .pill{padding:6px 10px;border-radius:999px;background:#1a1b2b;border:1px solid #2b2c3f}
+.banniere img{width:100%;height:320px;object-fit:cover;border-bottom:1px solid #22243a}
+.lang a{opacity:.85} .lang a.active{opacity:1;text-decoration:underline}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="inner container">
+  <div class="brand"><div class="logo" aria-hidden>🥚</div><strong>Le Monde de Tête d’Œuf</strong><span class="pill mono">$TDO</span></div>
+  <div class="menu" id="nav-links"></div>
+  <div class="lang">
+    <a href="#" id="lang-fr">🇫🇷 FR</a> | <a href="#" id="lang-en">🇬🇧 EN</a>
+    <a href="#mint" class="btn" id="cta"></a>
+  </div>
+</div></nav>
+
+<div class="banniere"><img src="banner.jpg" alt="Bannière (remplacez banner.jpg)"></div>
+
+<header class="hero"><div class="container">
+  <h1 class="h1" id="hero_h1"></h1>
+  <p class="lead" id="hero_lead"></p>
+  <div class="chips" id="chips"></div>
+  <div class="card" style="margin-top:18px">
+    <h3 style="margin:0 0 8px" id="quick"></h3>
+    <div class="list">
+      <div>
+        <div class="tag" id="contracts"></div>
+        <ul class="list" style="margin:8px 0 0;padding:0;list-style:none">
+          <li>ERC‑20 <span class="mono" id="erc20">0xeE964B0CB9bbF0d219fb85d0B54D4F0fb3F78F76</span> — <a id="scan20" href="#">Polygonscan</a></li>
+          <li>ERC‑721 <span class="mono" id="erc721">0x32c443BC104afe882DAf0410b9bf5B6248C87C09</span> — <a id="scan721" href="#">Polygonscan</a></li>
+          <li>ERC‑1155 <span class="mono" id="erc1155">0x580f44b14099Cc33860631F84c7c611A69Bc9830</span> — <a id="scan1155" href="#">Polygonscan</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div></header>
+
+<section id="nfts" class="section"><div class="container">
+  <h2 class="h2" id="nfts_h2"></h2>
+  <div class="gallery" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+    <img src="nft1.jpg" alt="NFT 1 (remplacez nft1.jpg)">
+    <img src="nft2.jpg" alt="NFT 2 (remplacez nft2.jpg)">
+    <img src="nft3.jpg" alt="NFT 3 (remplacez nft3.jpg)">
+  </div>
+</div></section>
+
+<section id="token" class="section"><div class="container">
+  <h2 class="h2" id="token_h2"></h2>
+  <p id="token_p"></p>
+  <div class="card" style="margin-top:12px">
+    <div class="list">
+      <div><span class="tag" id="token_kpi_addr"></span> <b class="mono">0xeE964B0CB9bbF0d219fb85d0B54D4F0fb3F78F76</b></div>
+      <div><span class="tag" id="token_kpi_net"></span> <b>Polygon</b></div>
+      <div><span class="tag" id="token_kpi_liq"></span> <b>QuickSwap (à venir)</b></div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3 style="margin:0 0 12px" id="tokenomics_title"></h3>
+    <p class="note" id="tokenomics_note"></p>
+    <ul class="list" style="list-style:none;padding:0">
+      <li>40% Communauté / Récompenses</li>
+      <li>25% Trésorerie & Dév</li>
+      <li>20% Liquidité</li>
+      <li>10% Partenaires & Artistes</li>
+      <li>5% Dons caritatifs</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="boutique" class="section"><div class="container">
+  <h2 class="h2" id="shop_h2"></h2>
+  <p id="shop_p"></p>
+  <ul class="list" style="list-style:none;padding:0" id="shop_split"></ul>
+</div></section>
+
+<section id="causes" class="section"><div class="container">
+  <h2 class="h2" id="causes_h2"></h2>
+  <p id="causes_p"></p>
+  <div class="card" style="margin-top:16px">
+    <h3 id="transparency"></h3>
+    <p id="transparency_p"></p>
+    <p><span class="mono">0x1d114B6B81A2f08a219d4c6Cb86cbFC86De27A0a</span></p>
+  </div>
+</div></section>
+
+<section id="vote" class="section"><div class="container">
+  <h2 class="h2" id="votes_h2"></h2>
+  <p id="votes_p"></p>
+  <ul class="list" style="list-style:none;padding:0" id="votes_list"></ul>
+</div></section>
+
+<section id="game" class="section"><div class="container">
+  <h2 class="h2" id="game_h2"></h2>
+  <p id="game_p"></p>
+</div></section>
+
+<section id="blog" class="section"><div class="container">
+  <h2 class="h2" id="blog_h2"></h2>
+  <p id="blog_p"></p>
+</div></section>
+
+<section id="roadmap" class="section"><div class="container">
+  <h2 class="h2" id="roadmap_h2"></h2>
+  <ol class="list" style="list-style:decimal inside;padding:0" id="roadmap_items"></ol>
+  <div class="card" style="margin-top:16px">
+    <h3 id="audit_title"></h3>
+    <p id="audit_p"></p>
+  </div>
+</div></section>
+
+<section id="whitepaper" class="section"><div class="container">
+  <h2 class="h2">Whitepaper & Docs</h2>
+  <div style="display:flex;gap:10px;flex-wrap:wrap">
+    <a class="btn" href="docs/whitepaper.pdf">Télécharger le whitepaper (PDF)</a>
+    <a class="btn ghost" href="https://github.com/Jeanpaulniel/le-monde-de-tete-doeuf">GitHub</a>
+  </div>
+</div></section>
+
+<section id="contact" class="section"><div class="container">
+  <h2 class="h2" id="contact_h2"></h2>
+  <p>Email : <a href="mailto:contact@tdo.xyz">contact@tdo.xyz</a></p>
+  <p>Réseaux : <a href="#">@TDO_official</a></p>
+</div></section>
+
+<footer class="footer"><div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+  <span>© <span id="y"></span> Le Monde de Tête d’Œuf — TDO</span>
+  <span class="note">Art direction : cartoon & underground · Made with ♥</span>
+</div></footer>
+
+<script>
+const I18N = {
+  fr: {"nav": ["Token", "NFTs", "Magasin", "Œuvres", "Chat & Votes", "Jeu", "Blog", "Feuille de route", "Whitepaper", "Contact"], "cta": "Participer", "hero_h1": "Cartoon • Underground • Solidaire.\nBienvenue dans l’écosystème $TDO.", "hero_lead": "Token utilitaire + NFTs jouables + boutique phygitale. Une partie des ventes finance des causes (cancer du sein, VIH/SIDA, harcèlement scolaire, violences conjugales…). Réseau : Polygon.", "quick": "Liens rapides", "contracts": "Smart contracts (Polygon)", "chips": ["ERC-20 (token)", "ERC-721 (avatars)", "ERC-1155 (éditions)", "Phygital + QR codes"], "token_h2": "Token $TDO", "token_p": "Le « token du peuple » — utilitaire pour achats, votes communautaires, avantages in‑game et récompenses des détenteurs.", "token_kpi_addr": "Adresse", "token_kpi_net": "Réseau", "token_kpi_liq": "Liquidité", "tokenomics_title": "Tokenomics (exemple)", "tokenomics_note": "Remplace ces pourcentages par tes chiffres réels (vesting conseillé pour l’équipe).", "nfts_h2": "Collections NFT", "shop_h2": "Magasin", "shop_p": "T‑shirts, hoodies, casquettes, gadgets. Paiement CB et crypto ($TDO). Tous les produits ne sont pas caritatifs :", "shop_split": ["• Ligne Classique → revenus vers la Trésorerie (développement du projet).", "• Ligne Solidaire → pourcentage vers le Wallet solidaire."], "causes_h2": "Œuvres caritatives", "causes_p": "Collecte toute l’année. Versements 1 à 2 fois par an vers une ou plusieurs causes, choisies par la communauté — causes renouvelées chaque année.", "transparency": "Transparence & Dons", "transparency_p": "Wallet solidaire :", "votes_h2": "Chat & Votes", "votes_p": "Espace communautaire pour discuter, proposer des idées et voter :", "votes_list": ["• Choix de la cause du mois", "• Direction artistique (drops, collaborations)", "• Évolutions du jeu"], "game_h2": "Futur Jeu", "game_p": "Certains NFTs deviendront des avatars jouables : skins, stats et objets spéciaux. Le token $TDO pourra servir pour des achats in‑game.", "blog_h2": "Blog", "blog_p": "Actus du projet, making‑of, coulisses artistiques, bilans de dons. (Intégration CMS no‑code possible.)", "roadmap_h2": "Feuille de route", "roadmap_items": ["T1 — Mise en ligne du site, premiers NFTs solidaires", "T2 — Boutique phygitale + QR codes sur produits", "T3 — Tokenisation & IDO TDO (création de la liquidité QuickSwap)", "T4 — Alpha du jeu (avatars NFT jouables)", "T5 — Gouvernance communautaire & versements annuels"], "audit_title": "Audit & Sécurité", "audit_p": "Bonnes pratiques : multisig, timelock, vesting, liste d’adresses officielles, événements on‑chain. Audits externes à prévoir.", "contact_h2": "Contact", "qr_h3": "QR codes intelligents", "qr_p": "Imprime un QR unique par produit ou collection. Exemple d’URL :"},
+  en: {"nav": ["Token", "NFTs", "Store", "Charity", "Chat & Votes", "Game", "Blog", "Roadmap", "Whitepaper", "Contact"], "cta": "Get Started", "hero_h1": "Cartoon • Underground • United.\nWelcome to the $TDO ecosystem.", "hero_lead": "Utility token + playable NFTs + phygital shop. Part of the sales fund charities (breast cancer, HIV/AIDS, anti‑bullying, domestic violence). Network: Polygon.", "quick": "Quick links", "contracts": "Smart contracts (Polygon)", "chips": ["ERC‑20 (token)", "ERC‑721 (avatars)", "ERC‑1155 (editions)", "Phygital + QR codes"], "token_h2": "Token $TDO", "token_p": "“People’s token” — used for purchases, community votes, in‑game perks and holder rewards.", "token_kpi_addr": "Address", "token_kpi_net": "Network", "token_kpi_liq": "Liquidity", "tokenomics_title": "Tokenomics (example)", "tokenomics_note": "Replace these percentages with your actual figures (team vesting recommended).", "nfts_h2": "NFT Collections", "shop_h2": "Store", "shop_p": "T‑shirts, hoodies, caps, gadgets. Pay by card or crypto ($TDO). Not all items are charitable:", "shop_split": ["• Classic line → revenue to Treasury (project development).", "• Charity line → percentage to the Charity Wallet."], "causes_h2": "Charity", "causes_p": "Year‑round collection. Payouts 1–2 times per year to one or more causes, chosen by the community — beneficiaries rotate annually.", "transparency": "Transparency & Donations", "transparency_p": "Charity wallet:", "votes_h2": "Chat & Votes", "votes_p": "Community area to discuss, propose ideas and vote:", "votes_list": ["• Cause of the month", "• Art direction (drops, collabs)", "• Game evolution"], "game_h2": "Future Game", "game_p": "Some NFTs become playable avatars: skins, stats and items. $TDO may be used for in‑game purchases.", "blog_h2": "Blog", "blog_p": "Project news, making‑of, behind the scenes, donation reports. (No‑code CMS possible.)", "roadmap_h2": "Roadmap", "roadmap_items": ["Q1 — Website online, first charity NFTs", "Q2 — Phygital store + QR codes on products", "Q3 — Tokenisation & $TDO IDO (QuickSwap liquidity)", "Q4 — Game alpha (playable NFT avatars)", "Q5 — Community governance & annual payouts"], "audit_title": "Audit & Security", "audit_p": "Best practices: multisig, timelock, vesting, official addresses list, on‑chain events. External audits planned.", "contact_h2": "Contact", "qr_h3": "Smart QR codes", "qr_p": "Print a unique QR per product or collection. Example URL:"}
+};
+
+function render(lang){
+  const t = I18N[lang];
+  const ids = ['token','nfts','boutique','causes','vote','game','blog','roadmap','whitepaper','contact'];
+  document.getElementById('nav-links').innerHTML = t.nav.slice(0,9).map((label,i)=>`<a href="#${ids[i]}">${label}</a>`).join('') + `<a href="#contact" class="pill">${t.nav[9]}</a>`;
+  document.getElementById('cta').textContent = t.cta;
+  document.getElementById('hero_h1').textContent = t.hero_h1;
+  document.getElementById('hero_lead').textContent = t.hero_lead;
+  document.getElementById('chips').innerHTML = t.chips.map(c=>`<span class="chip">${c}</span>`).join('');
+  document.getElementById('quick').textContent = t.quick;
+  document.getElementById('contracts').textContent = t.contracts;
+  document.getElementById('token_h2').textContent = t.token_h2;
+  document.getElementById('token_p').textContent = t.token_p;
+  document.getElementById('token_kpi_addr').textContent = t.token_kpi_addr;
+  document.getElementById('token_kpi_net').textContent = t.token_kpi_net;
+  document.getElementById('token_kpi_liq').textContent = t.token_kpi_liq;
+  document.getElementById('tokenomics_title').textContent = t.tokenomics_title;
+  document.getElementById('tokenomics_note').textContent = t.tokenomics_note;
+  document.getElementById('nfts_h2').textContent = t.nfts_h2;
+  document.getElementById('shop_h2').textContent = t.shop_h2;
+  document.getElementById('shop_p').textContent = t.shop_p;
+  document.getElementById('shop_split').innerHTML = t.shop_split.map(x=>`<li>${x}</li>`).join('');
+  document.getElementById('causes_h2').textContent = t.causes_h2;
+  document.getElementById('causes_p').textContent = t.causes_p;
+  document.getElementById('transparency').textContent = t.transparency;
+  document.getElementById('transparency_p').textContent = t.transparency_p;
+  document.getElementById('votes_h2').textContent = t.votes_h2;
+  document.getElementById('votes_p').textContent = t.votes_p;
+  document.getElementById('votes_list').innerHTML = t.votes_list.map(x=>`<li>${x}</li>`).join('');
+  document.getElementById('game_h2').textContent = t.game_h2;
+  document.getElementById('game_p').textContent = t.game_p;
+  document.getElementById('blog_h2').textContent = t.blog_h2;
+  document.getElementById('blog_p').textContent = t.blog_p;
+  document.getElementById('roadmap_h2').textContent = t.roadmap_h2;
+  document.getElementById('roadmap_items').innerHTML = t.roadmap_items.map(x=>`<li>${x}</li>`).join('');
+  document.getElementById('audit_title').textContent = t.audit_title;
+  document.getElementById('audit_p').textContent = t.audit_p;
+  document.getElementById('contact_h2').textContent = t.contact_h2;
+  document.getElementById('lang-fr').classList.toggle('active', lang==='fr');
+  document.getElementById('lang-en').classList.toggle('active', lang==='en');
+}
+
+['lang-fr','lang-en'].forEach(id=>document.getElementById(id).addEventListener('click',e=>{
+  e.preventDefault(); const l = id==='lang-fr'?'fr':'en'; render(l); localStorage.setItem('tdo_lang', l);
+}));
+
+const networkBase = 'https://polygonscan.com/address/';
+['erc20','erc721','erc1155'].forEach(id=>{
+  const el = document.getElementById(id);
+  const a = document.getElementById('scan'+id.replace('erc',''));
+  if(el && a){ a.href = networkBase + el.textContent.trim(); a.target = '_blank'; a.rel='noopener'; }
+});
+
+document.getElementById('y').textContent = new Date().getFullYear();
+render(localStorage.getItem('tdo_lang') || 'fr');
+</script>
+</body>
+</html>
