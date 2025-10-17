@@ -1,9 +1,89 @@
 <!doctype html>
-<html lang="fr"><head>
-  <meta charset="utf-8">
-  <title>TDO — Test OK</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-</head><body style="font-family:system-ui;padding:24px">
-  <h1>Site TDO en ligne ✅</h1>
-  <p>Si vous voyez ceci, GitHub Pages fonctionne. On remplacera ce test par la page complète.</p>
-</body></html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Le Monde de Tête d’Œuf — TDO</title>
+<meta name="description" content="Écosystème Web3 solidaire : Token TDO, NFTs (ERC-721/1155), boutique, causes caritatives, votes, blog, futur jeu. Réseau Polygon.">
+<style>
+:root{--bg:#0b0b0f;--card:#14141c;--ink:#eaeaf2;--muted:#a5a6b8;--pri:#ffcc00;--acc:#ff477e}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+.container{max-width:1120px;margin:0 auto;padding:24px}
+.nav{position:sticky;top:0;background:rgba(11,11,15,.8);backdrop-filter:blur(10px);border-bottom:1px solid #1f2030;z-index:50}
+.nav .inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;padding:12px 24px}
+.logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--pri),var(--acc));display:grid;place-items:center;font-weight:800;color:#000}
+.btn{background:var(--pri);color:#111;padding:10px 16px;border-radius:12px;font-weight:700}
+.section{padding:56px 0}.h2{font-size:clamp(22px,2.5vw,32px)}
+.chip{display:inline-block;border:1px solid #2b2c3f;border-radius:999px;padding:6px 10px;margin:3px;color:var(--muted)}
+.card{background:#14141c;border:1px solid #22243a;border-radius:16px;padding:16px;margin-top:16px}
+.footer{border-top:1px solid #23243a;padding:28px 0;color:#8e90a6;text-align:center}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="inner container">
+    <div class="logo">🥚</div>
+    <strong>Le Monde de Tête d’Œuf</strong>
+    <a href="#soutenir" class="btn">Soutenir</a>
+  </div>
+</nav>
+
+<header class="container">
+  <h1>Cartoon • Underground • Solidaire</h1>
+  <p>Bienvenue dans l’écosystème <strong>$TDO</strong> — token utilitaire, NFTs jouables, boutique phygitale et œuvres caritatives. Réseau : Polygon.</p>
+  <div>
+    <span class="chip">ERC-20</span><span class="chip">ERC-721</span><span class="chip">ERC-1155</span><span class="chip">QR Codes</span>
+  </div>
+</header>
+
+<section id="nfts" class="section container">
+  <h2 class="h2">Collections NFT</h2>
+  <div class="gallery">
+    <img src="nft1.jpg" alt="NFT 1">
+    <img src="nft2.jpg" alt="NFT 2">
+    <img src="nft3.jpg" alt="NFT 3">
+  </div>
+</section>
+
+<section id="token" class="section container">
+  <h2 class="h2">Token $TDO</h2>
+  <p>Le « token du peuple » : utilitaire pour achats, votes communautaires, avantages in-game et récompenses des détenteurs.</p>
+  <div class="card">
+    <p><strong>Adresse :</strong> 0xeE964B0CB9bbF0d219fb85d0B54D4F0fb3F78F76<br>
+       <strong>Réseau :</strong> Polygon<br>
+       <strong>Liquidité :</strong> QuickSwap (à venir)</p>
+  </div>
+</section>
+
+<section id="roadmap" class="section container">
+  <h2 class="h2">Feuille de route</h2>
+  <ul>
+    <li>T1 2025 – Mise en ligne du site, premiers NFTs solidaires</li>
+    <li>T2 2025 – Boutique phygitale + QR codes</li>
+    <li>T3 2025 – Tokenisation & IDO TDO</li>
+    <li>T4 2025 – Alpha du jeu (avatars NFT jouables)</li>
+    <li>T1 2026 – Gouvernance & versements annuels</li>
+  </ul>
+</section>
+
+<section id="soutenir" class="section container">
+  <h2 class="h2">Soutenir le projet</h2>
+  <h3>💼 Contribuer à la Trésorerie TDO</h3>
+  <p>Les contributions servent à la production, la liquidité initiale et le développement du jeu.</p>
+  <div class="card">
+    <p><strong>Adresse Trésorerie :</strong><br><span>0xCd67007FdB1beaFD17578C5cC1cCd360eE55df3A</span></p>
+  </div>
+  <h3>💖 Soutenir les causes solidaires</h3>
+  <p>Fonds redistribués vers les causes votées par la communauté : cancer du sein, VIH/SIDA, harcèlement scolaire, violences conjugales…</p>
+  <div class="card">
+    <p><strong>Wallet Solidaire :</strong><br><span>0x1d114B6B81A2f08a219d4c6Cb86cbFC86De27A0a</span></p>
+  </div>
+</section>
+
+<footer class="footer">
+  © <script>document.write(new Date().getFullYear())</script> Le Monde de Tête d’Œuf — $TDO
+</footer>
+</body>
+</html>
